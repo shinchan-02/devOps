@@ -61,17 +61,21 @@ const App: React.FC = () => {
                 <a href="#contact" className="flex items-center gap-2 bg-primary text-darker px-6 py-3 rounded-sm font-mono font-bold hover:bg-sky-300 transition-all hover:shadow-[0_0_15px_rgba(56,189,248,0.4)]">
                   Initialize_Project <ArrowRight size={18} />
                 </a>
-                <a href="/Satyam_Agarwal_devOps.pdf" download className="flex items-center gap-2 border border-slate-700 bg-surface/50 text-white px-6 py-3 rounded-sm font-mono font-bold hover:border-primary/50 hover:text-primary transition-all">
+                <a href="/devOps/Satyam_Agarwal_devOps.pdf" download="Satyam_Agarwal_Resume.pdf" className="flex items-center gap-2 border border-slate-700 bg-surface/50 text-white px-6 py-3 rounded-sm font-mono font-bold hover:border-primary/50 hover:text-primary transition-all">
                   Download_CV <Download size={18} />
                 </a>
               </div>
               
-              <div className="mt-8 flex items-center justify-center lg:justify-start gap-6 text-slate-500">
-                <a href={CONTACT_INFO.linkedin} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors hover:scale-110 transform"><Linkedin size={24} /></a>
-                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-primary transition-colors hover:scale-110 transform"><Mail size={24} /></a>
-                <a href={CONTACT_INFO.medium} target="_blank" rel="noreferrer" className="hover:text-primary transition-colors flex items-center gap-1 font-medium hover:scale-105 transform">
-                   <span>Medium</span>
-                </a>
+              <div className="mt-8 flex items-center justify-center lg:justify-start gap-3 text-slate-600 font-mono text-xs">
+                <span className="flex items-center gap-2">
+                  <span className="text-accent">⚡</span>
+                  <span>LAST_DEPLOY: <span className="text-slate-500">2025-12-27</span></span>
+                </span>
+                <span className="text-slate-700">|</span>
+                <span className="flex items-center gap-2">
+                  <span className="text-secondary">🔧</span>
+                  <span>VERSION: <span className="text-slate-500">2.1.0</span></span>
+                </span>
               </div>
             </div>
             
@@ -222,7 +226,7 @@ const App: React.FC = () => {
                       </div>
                       
                       <ul className="space-y-2">
-                        {exp.achievements.slice(0, 3).map((item, i) => (
+                        {exp.achievements.slice(0, 4).map((item, i) => (
                           <li key={i} className="text-sm text-slate-400 flex items-start gap-2">
                             <span className="text-primary mt-1 font-mono text-xs">{'>'}</span>
                             <span>{item}</span>
@@ -254,13 +258,13 @@ const App: React.FC = () => {
             Looking for an infrastructure audit, CI/CD overhaul, or Kubernetes migration? 
           </p>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-6">
+          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
             <a 
               href={`mailto:${CONTACT_INFO.email}`} 
-              className="flex items-center justify-center gap-3 bg-primary text-darker px-8 py-4 rounded-sm font-bold text-lg font-mono hover:bg-sky-300 transition-all"
+              className="flex items-center justify-center gap-3 bg-primary text-darker px-8 py-4 rounded-sm font-bold text-lg font-mono hover:bg-sky-300 transition-all hover:shadow-[0_0_15px_rgba(56,189,248,0.4)]"
             >
               <Mail size={20} />
-              Send_Packet
+              Email_Me
             </a>
             <a 
               href={CONTACT_INFO.linkedin}
@@ -269,15 +273,37 @@ const App: React.FC = () => {
               className="flex items-center justify-center gap-3 bg-transparent border border-slate-600 text-slate-300 px-8 py-4 rounded-sm font-bold text-lg font-mono hover:border-primary hover:text-primary transition-all"
             >
               <Linkedin size={20} />
-              /satyam-agrawal
+              LinkedIn
+            </a>
+          </div>
+
+          <div className="flex items-center justify-center gap-6 pb-8">
+            <a 
+              href={CONTACT_INFO.medium}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 text-slate-500 hover:text-accent transition-colors font-mono text-sm hover:scale-105 transform"
+            >
+              <span className="w-6 h-6 rounded-full bg-slate-800 flex items-center justify-center text-xs">M</span>
+              <span>Medium Blog</span>
             </a>
           </div>
           
-          <div className="mt-16 pt-8 border-t border-slate-800 text-slate-600 text-xs font-mono">
-            <p>SATYAM AGRAWAL © {new Date().getFullYear()} :: SRE // DEVOPS</p>
-            <p className="mt-2">
-               STATUS: <span className="text-green-500">ONLINE</span>
-            </p>
+          <div className="mt-8 pt-8 border-t border-slate-800 text-slate-600 text-xs font-mono">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-3">
+              <span className="flex items-center gap-2">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                <span>STATUS: <span className="text-green-500">ONLINE</span></span>
+              </span>
+              <span className="hidden sm:inline text-slate-700">|</span>
+              <span>LAST_UPDATED: <span className="text-slate-500">Dec 2025</span></span>
+              <span className="hidden sm:inline text-slate-700">|</span>
+              <span>UPTIME: <span className="text-accent">99.9%</span></span>
+            </div>
+            <p className="text-slate-700">SATYAM AGRAWAL © {new Date().getFullYear()} :: SR. SRE / DEVOPS ENGINEER</p>
           </div>
         </div>
       </section>
