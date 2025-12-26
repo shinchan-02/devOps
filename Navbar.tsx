@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Terminal, Github, Linkedin, Mail } from 'lucide-react';
-import { CONTACT_INFO } from '../constants';
+import { CONTACT_INFO } from './constants';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,4 +1,4 @@
-import { Experience, Project, Service, SkillCategory } from './types';
+import { Experience, Project, Service, SkillCategory } from './type';
 import { 
   Cloud, 
   Server, 

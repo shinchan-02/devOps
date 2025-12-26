@@ -1,7 +1,7 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import TerminalComponent from './components/Terminal';
-import SectionTitle from './components/SectionTitle';
+import Navbar from './Navbar';
+import TerminalComponent from './Terminal';
+import SectionTitle from './SectionTitle';
 import { 
   ArrowRight, 
   Download, 
